@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #252329;
+  color: #fff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.main-title {
+  background: linear-gradient(75.96deg, #ffffff 16.53%, #68d2ff 38.88%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.hand {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.or::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 50px;
+  background-color: gray;
+  display: block;
+}
+
+/* tailwind uts */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.thisnotes::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.5em;
+}
+
+.thisnotes::-webkit-scrollbar-track {
+  background-color: #808080;
+  border-radius: 20px;
+}
+
+.thisnotes::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 20px;
+}
+
+.thisnotes::-webkit-scrollbar-thumb:hover {
+  background-color: #999999;
+}
